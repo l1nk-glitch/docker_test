@@ -1,11 +1,31 @@
 # Container test
 
+## Prerequisites
+
+
+This Container is to be run on a Linux machine.
+Having docker installed on your machine. If unsure, run
+``` bash
+docker -v
+```
+which shows you the current version.
+
+---
 ## Creating the image and running the container
 
+
+With the following command 
 ``` bash
-
+docker build -t YOURCONTAINERNAME .
 ```
+you create the docker image. Make sure, not to forget the "." at the end.
+The "-t" flag indicates the name of your container.
 
+After creation of the image is done, you can run the container by typing in:
 ``` bash
-
+docker run -p 3000:3000 YOURCONTAINERNAME
 ```
+There should be a message about "Listening on port 3000".
+The "-p" flag is for port forwarding. The first number is relevant to your computer and the second number to the container.
+
+Go to your browser and check the port on your localhost and you should see a nice little message.

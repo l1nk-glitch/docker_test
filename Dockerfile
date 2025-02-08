@@ -14,11 +14,11 @@ RUN npm install
 # copy the rest of the app into the containter
 COPY . .
 
-# set port environment variable
-# ENV PORT=9000
+# set port environment variable - not necessary, check why
+# ENV PORT=3000
 
-# Expose this port, so the computer can access it
-# EXPOSE 9000
+# Expose this port, so the computer can access it - not necessary, check why
+# EXPOSE 3000
 
 #run the app
 CMD ["npm", "start"]
